@@ -15,7 +15,7 @@ class ResearchCrew():
     @agent
     def researcher(self) -> Agent:
         return Agent(
-            config=self.agents_config['researcher'], # type: ignore[index]
+            config=self.agents_config['researcher'], 
             verbose=True,
             tools=[SerperDevTool()]
         )
@@ -23,20 +23,20 @@ class ResearchCrew():
     @agent
     def analyst(self) -> Agent:
         return Agent(
-            config=self.agents_config['analyst'], # type: ignore[index]
+            config=self.agents_config['analyst'], 
             verbose=True
         )
 
     @task
     def research_task(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'] # type: ignore[index]
+            config=self.tasks_config['research_task'] 
         )
 
     @task
     def analysis_task(self) -> Task:
         return Task(
-            config=self.tasks_config['analysis_task'], # type: ignore[index]
+            config=self.tasks_config['analysis_task'], 
             output_file='output/report.md'
         )
 
